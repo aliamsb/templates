@@ -5,6 +5,8 @@
     outline: none;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    border: none;
 }
 
 body {
@@ -12,6 +14,12 @@ body {
     background-size: 30%;
     background-attachment: fixed;
     height: 300vh;
+    overflow-y: scroll;
+}
+
+#top{
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
 }
 
 .header {
@@ -34,8 +42,10 @@ body {
 }
 
 .menu {
+    font-size: 1.1em;
     display: flex;
     direction: ltr;
+    margin-left: 1em;
 }
 
 .menu a {
@@ -43,6 +53,216 @@ body {
     padding: 1em;
 }
 
-.short_describe {
+.backtop {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: teal;
+    position: fixed;
+    bottom: 3em;
+    right: 2em;
+    opacity: 0.8;
+    transform: scale(1) rotate(-90deg);
+    transition: all 200ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: large;
+    color:rgb(255, 255, 255);
+}
 
+.none {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+}
+
+.short_describe-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.short-describe {
+    margin: 10em 4em 5em 4em;
+    max-width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.white-space{
+    white-space: nowrap;
+}
+
+.describe {
+    /* min-width: 30px; */
+    flex-grow: 1;
+    margin-right: 4em;
+}
+
+.describe>p {
+    margin: 2em 0;
+    line-height: 1.4;
+}
+
+.describe h1 {
+    font-size: 3em;
+}
+
+.join {
+    display: flex;
+    background-color: teal;
+    width: max-content;
+    color: white;
+}
+
+.join>p {
+    margin: 0 0 0 1.5em;
+}
+
+.button {
+    border-radius: 100px;
+    padding: 1em 2em 1em 2em;
+    border: none;
+}
+
+.options-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options {
+    max-width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 4em 2em 4em;
+    flex-wrap: wrap;
+}
+
+.option {
+    /* max-width: 400px; */
+    min-width: 200px;
+    width: 30%;
+    min-width: none;
+    display: flex;
+    flex-shrink: 2;
+    flex-grow: 1;
+    color: black;
+    flex-direction: column;
+    margin: 2em 1em 2em 1em;
+}
+
+.option img{
+    width: 100%;
+    height: 240px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.option p{
+    margin-top: 1em;
+    flex-shrink: 1;
+}
+
+.option span{
+    padding-left: 1em;
+    font-weight: bold;
+}
+
+.explain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.explain p{
+    text-align: center;
+}
+
+.search-container{
+    display: flex;
+    margin: 0 4em 0 4em;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.search-holder{
+    max-width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.search-holder>div{
+}
+
+.search{
+    margin: 2em 0 2em 0;
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+.common-searchs{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.search-container h1{
+    font-size: 2.5em;
+}
+
+.search-box{
+    padding: 1em 0;
+    display: flex;
+}
+
+.search-box div{
+    margin-right: 1em;
+    padding-left: 2em;
+    width: 44%;
+    background-color: white;
+    border: 2px rgb(119, 119, 119) solid;
+    border-radius: 7px;
+}
+
+.search-box input{
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.submit{
+    background-color: rgb(255, 75, 75);
+    border-radius: 10px;
+    padding: 1em 0 1em 2em;
+    border: none;
+    width: calc(88% + 20px);
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+.common-search-holder{
+    /* margin-top: 1em; */
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.common{
+    background-color: teal;
+    margin: 1em 1em 0 0;
 }
